@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do Application</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="header-container">
+        <h1>Start writing!</h1>
+        <form action="" id="todo-form">
+          <input
+            type="text"
+            name="task-name"
+            placeholder="e.g. Get Fruits"
+            autofocus
+          />
+          <button type="submit">Add task</button>
+        </form>
+      </div>
+    </header>
+    <section>
+      <div class="main-container" id="main-content">
+        <ul class="stats">
+          <li>
+            <span>Remaining</span>
+            <span class="task-count" id="remaining-tasks">0</span>
+          </li>
+          <li>
+            <span>Completed</span>
+            <span class="task-count" id="completed-tasks">0</span>
+          </li>
+          <li>
+            <span>Total</span>
+            <span class="task-count" id="total-tasks">0</span>
+          </li>
+        </ul>
+        <ul class="todos">
+          <li>
+            <div>
+              <input type="checkbox" name="tasks" id="1" />
+              <span contenteditable>Task 1</span>
+            </div>
+            <button title="Remove task" class="remove-task">X</button>
+          </li>
+          <li class="completed">
+            <div>
+              <input type="checkbox" name="tasks" id="2" />
+              <span>Task 2</span>
+            </div>
+            <button title="Remove task" class="remove-task">X</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>
+          Made by <a href="https://github.com/meetsoni1214/">@meetsoni1214</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

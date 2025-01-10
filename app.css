@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
+
+:root {
+  --global-border-radius: 8px;
+  --global-background-color: rgb(226, 247, 254);
+  --global-text-color: rgb(125, 205, 255);
+  --global-transition: all 0.2s ease-in-out;
+}
+body {
+  background-color: var(--global-background-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+#main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 22, 87);
+  height: 150px;
+  margin-bottom: 25px;
+}
+#todo-form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: var(--global-border-radius);
+  width: 250px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: orange;
+  border-radius: var(--global-border-radius);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+.stats li {
+  background-color: rgb(16, 22, 87);
+  padding: 8px 0px 8px 8px;
+  font-size: small;
+  border-radius: var(--global-border-radius);
+  color: white;
+}
+
+.task-count {
+  background-color: aqua;
+  padding: 8px;
+  border-radius: 0px 8px 8px 0px;
+  color: black;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.todos {
+  margin-bottom: 4rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.todos li {
+  margin-bottom: 1rem;
+  width: 50rem;
+  background-color: white;
+  padding: 1.5rem 1rem;
+  list-style-type: none;
+  border-radius: var(--global-border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todos li div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.todos li div span {
+  padding: 2px;
+  border-radius: var(--global-border-radius);
+  transition: all 0.2s ease-in-out;
+}
+
+.todos li div span:focus {
+  background-color: var(--global-background-color);
+  outline: none;
+  border: none;
+}
+
+.todos li div span[contenteditable]:hover {
+  background-color: var(--global-background-color);
+}
+
+.todos li.completed {
+  text-decoration: line-through;
+  color: var(--global-text-color);
+  background-color: aliceblue;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid black;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: var(--global-transition);
+}
+
+input[type="checkbox"]::before {
+  content: "✓";
+  transform: scale(0);
+  transition: var(--global-transition);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--global-background-color);
+  border-color: var(--global-background-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.remove-task {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.remove-task:hover {
+  color: var(--global-background-color);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(16, 22, 87);
+}
