@@ -124,9 +124,12 @@ section {
 }
 
 .todos li.completed {
-  text-decoration: line-through;
   color: var(--global-text-color);
   background-color: aliceblue;
+}
+
+.todos li.completed span {
+  text-decoration: line-through;
 }
 
 input[type="checkbox"] {
